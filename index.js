@@ -7,10 +7,13 @@ import { notFound, errorhandler } from "./middleware/errorMiddleware.js";
 import { userRoute } from "./routes/userRoutes.js";
 import { orderRoute } from "./routes/orderRoutes.js";
 import { uploadRoutes } from "./routes/uploadRoutes.js";
+import cors from "cors";
 
 dotenv.config();
 createConnection();
 const app = express();
+
+app.use(cors());
 
 if(process.env.NODE_ENV==='development'){
   app.use(morgan('dev'))
