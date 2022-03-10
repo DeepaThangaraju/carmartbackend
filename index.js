@@ -1,4 +1,4 @@
-import express from "Express";
+import express from "express";
 import morgan from "morgan";
 import dotenv from "dotenv";
 import { createConnection } from "./connection/db.js";
